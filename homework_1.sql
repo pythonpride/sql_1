@@ -22,7 +22,8 @@ create table if not exists Performers_Albums (
   constraint pk2 primary key (Performers_id, Albums_id));
 
 create table if not exists Tracks (
-  Id serial primary key, Name varchar(100) not null, 
+  Id serial primary key, 
+  Name varchar(100) not null, 
   Duration integer not null, 
   Albums_id integer references Albums(Id));
 
